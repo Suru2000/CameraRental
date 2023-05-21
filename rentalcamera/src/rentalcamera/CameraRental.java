@@ -10,8 +10,11 @@ public class CameraRental {
 		System.out.println("|\t Welcome to rentmycam           |\n");
 		System.out.println("+---------------------------------------+\n");
 		System.out.println("Pease Login to continue\n");
-		System.out.println("Username -\n");
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Username :\n");
+		String Username = sc.nextLine();
 		System.out.println("Password: \n");
+		String Password = sc.nextLine();
 		Selectoption();
 	}
 	private static void Selectoption() {
@@ -37,11 +40,12 @@ public class CameraRental {
                     	MyCamera();
                         break;
                     case 2:
-                    	Available();
+                    	RentCamera();
                     	break;
                     case 3:
                     	ArrayList1 obj3 = new ArrayList1();
                     	obj3.AllCam();
+                    	Selectoption();
                     	break;
                     case 4:
                     	MyWallet();
@@ -55,6 +59,15 @@ public class CameraRental {
 	}
 	
 	
+	private static void RentCamera() {
+		ArrayList1 obj = new ArrayList1();
+		System.out.println("FOLLOWING IS THE LIST OF AVAILABLE CAMERA(S):\n");
+		obj.AllCam();
+		Scanner sc = new Scanner(System.in);
+		System.out.println("ENTER THE CAMERA ID YOU WANT TO RENT:");
+		int CameraID = sc.nextInt();
+		Selectoption();
+	}
 	private static void MyWallet() {
 		double Balance = 0;
 		System.out.println("YOUR CURRENT WALLET BALANCE IS - INR."+Balance);
@@ -70,15 +83,9 @@ public class CameraRental {
 		else {
 			Selectoption();
 		}
-		
-		
+		Selectoption();
 	}
-	private static void Available() {
-		ArrayList1 OBJ = new ArrayList1();
-		boolean found = true;
-		
-		
-	}
+
 	private static void MyCamera() {
 		String[] mycam = {"1.ADD",
 				"2.REMOVE",
@@ -107,9 +114,12 @@ public class CameraRental {
 					obj1.AllCam();
 					obj1.Remove();
 					System.out.println("CAMERA SUCCESSFULLY REMOVED FROM THE LIST");
+					MyCamera();
+					break;
 				case 3:
 					ArrayList1 obj4 = new ArrayList1();
 					obj4.AllCam();
+					MyCamera();
 					break;
 				case 4:
 					Selectoption();

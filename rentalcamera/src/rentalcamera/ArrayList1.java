@@ -27,9 +27,9 @@ static void AllCam() {
 	Camera c4 = new Camera(4, "Canon", "XLR", 500.0, "Available");
 	Camera c5 = new Camera(5, "Fukitsu", "J5", 500.0, "Available");
 	Camera c6 = new Camera(6, "Sony", "HD226", 500.0, "Available");
-	Camera c7 = new Camera(7, "NIKON", "DSLR-D7500", 500, "Available");
+	Camera c7 = new Camera(7, "NIKON", "DSLR-D75", 500, "Available");
 	Camera c8 = new Camera(8, "LG", "L123", 500.0, "Available");
-	Camera c9 = new Camera(9, "Canon", "XPL", 500.0, "Rented");
+	Camera c9 = new Camera(9, "Canon", "XPL", 500.0, "Available");
 	Camera c10 = new Camera(10, "Chroma", "CT", 500.0, "Available");
 	
 	ArrayList<Camera> allCam = new ArrayList<Camera>();
