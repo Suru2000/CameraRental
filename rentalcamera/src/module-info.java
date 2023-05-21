@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author Adminastrator
+ *
+ */
+module rentalcamera {
+}
